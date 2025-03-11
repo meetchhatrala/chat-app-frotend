@@ -30,7 +30,7 @@ function App() {
   const [friends, setfriends] = useState({ friends_list: [], groups_list: [] })
   const [user_notifications, setuser_notifications] = useState({ friend_requests: [], group_requests: [] })
 
-  axios.defaults.baseURL = "http://127.0.0.1:8000" || "https://chat-app-backend-qzn8.onrender.com"    // axios base url setup
+  axios.defaults.baseURL =  "https://chat-app-backend-qzn8.onrender.com"    // axios base url setup
 
   // Makes a GET request to the server, which sets up the CSRF cookie in the browser's response, this cookie can then be used for subsequent POST requests to securely submit forms to the server.
   useEffect(() => {
