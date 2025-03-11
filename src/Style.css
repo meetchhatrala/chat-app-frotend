@@ -1,0 +1,472 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* CSS starts from here */
+
+
+/* Scroll bar setting */
+::-webkit-scrollbar{
+  width: 0.4rem;
+}
+::-webkit-scrollbar-thumb:vertical{
+  background-color: #7b58c2ad;
+  border-radius: 0.5em;
+}
+::-webkit-scrollbar-track{
+  margin: 0.1em;
+}
+
+
+
+/* Utils starts */
+.glow-text{
+  color: white;
+  text-shadow: 0px 0px 1.5px white;
+}
+.bg-blue{
+  background-color: #8650fc8a;
+}
+/* Utils ends */
+
+/* App CSS starts */
+#loader{
+  display: none;
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border: 2px solid #6d2df1;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 8rem;
+  box-shadow: 1px 1px 6px 0px #6d2df1;
+  margin-bottom: 5rem;
+  align-items: center;
+  z-index: 9999;
+}
+.loader-icon{
+  padding: 0.6rem;
+  border: 3px solid #5c5555;
+  border-radius: 50%;
+  border-top: 3px solid #00000000;
+  animation: spin 1s linear infinite;
+}
+#loader p{
+  margin: 0 !important;
+}
+@keyframes spin {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+/* App CSS ends */
+
+/* Navbar CSS starts */
+.navbar{
+  background-color: #6d2df1;
+  color: #ffffff !important;
+  height: 3.5rem;
+}
+.navbar-toggler{
+  border: 1px solid #ffffff69;
+}
+.navbar-toggler:focus{
+  box-shadow: 0 0 0 0 !important;
+}
+.offcanvas{
+  background-color: #6d2df1;
+}
+.nav-link{
+  color: #ffffff !important;
+}
+.mobile-search-input{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  background-color: #6d2df1;
+  box-shadow: 0px 3px 0px 6px #6d2df1;
+}
+.mobile-search-input > input{
+  border-radius: 2rem;
+}
+.nav-right{
+  display: none !important;
+}
+#search-form > input{
+  border-radius: 2rem;
+  height: 2.1rem;
+  width: 15rem;
+  padding-left: 2.6rem;
+}
+#search-form > svg{
+  position: absolute;
+  top: 0.4rem;
+}
+/* Navbar CSS ends */
+
+/* Search CSS starts */
+.search-usr-div{
+  width: 25rem;
+  margin: auto;
+}
+.search-usr-type{
+  color: #888787;
+  margin: 0.5rem 1rem;
+}
+.search-usr{
+  border: 1px solid black;
+  border-radius: 1rem;
+  margin: 0.8rem 0.8rem 1.5rem;
+  padding: 0.5rem;
+}
+.usr-img{
+  width: 3rem;
+  height: 3rem;
+}
+.usr-img img{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* Search CSS ends */
+
+/* Login CSS starts */
+.login-page{
+  width: 20rem;
+}
+.login-page input{
+  border: 0.1px solid #000000ad;
+}
+/* Login CSS ends */
+
+/* Signup CSS starts */
+.signup-page{
+  width: 20rem;
+}
+.signup-page input{
+  border: 0.1px solid #000000ad;
+}
+/* Signup CSS ends */
+
+/* Home CSS starts */
+.home{
+  margin: 0 !important;
+}
+/* Home CSS ends */
+
+/* FriendsList CSS starts */
+.friends-list{
+  background-color: #ffffff;
+  width: 20rem;
+  height: calc(100vh - 3.5rem);
+  overflow-y: scroll;
+  padding-left: 0;
+  padding-right: 0;
+} 
+.user-details:hover{
+  cursor: pointer;
+}
+.user-details img{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* FriendsList CSS ends */
+
+/* Chat CSS starts */
+.chat{
+  height: calc(100vh - 3.5rem);
+  overflow-y: hidden;
+  margin: 0 !important;
+  background-image: url(/src/assets/images/chat_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.chat-messages{
+  margin-bottom: 4.5rem;
+ overflow-y: scroll; 
+}
+.send-msg, .received-msg{
+  margin-left: 0.4rem;
+  margin-bottom: 0 !important;
+}
+.send-msg{
+  margin-left: auto;
+  margin-right: 0.2rem;
+}
+.send-msg .chat-msg{
+  background-color: #b28bff;
+  border-radius: 0.8rem;
+  border: 1px solid #000000c7;
+  max-width: 26rem;
+  word-wrap: anywhere;
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+}
+.received-msg .chat-msg{
+  background-color: #ffffff;
+  border-radius: 0.8rem;
+  border: 1px solid #000000c7;
+  max-width: 26rem;
+  word-wrap: anywhere;
+  display: inline-block;
+  padding: 1rem 0.9rem 0.3rem;
+  min-width: 8rem;
+}
+.user-chat-msg{
+  padding: 0.3rem 0.9rem !important;
+}
+.chat-name{
+  position: absolute;
+  border: 0 !important;
+  font-size: .65em;
+  left: 0.8rem;
+  top: 0.4em;
+  font-weight: bold;
+  color: #888787;
+}
+.chat-msg-form{
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.chat-msg-form textarea{
+  width: 35rem;
+  height: 3rem;
+  min-height: 3rem;
+  max-height: 130px;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
+.chat-msg-form textarea::-webkit-scrollbar-track-piece{
+  margin: 0.4rem;
+}
+.chat-msg-form button{
+  border-radius: 50%;
+  transform: rotate(45deg);
+  width: 2.6rem;
+  height: 2.6rem;
+  background-color: #6d2df1;
+}
+.chat-user-img{
+  width: 2rem;
+  height: 2rem;
+  align-self: flex-end;
+}
+.chat-user-img img{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+.chat-msg-box p{
+  white-space: pre-wrap;
+}
+/* Chat CSS ends */
+
+
+/* Account CSS starts */
+.account{
+  width: 22rem;
+  margin: 0.5rem auto;
+  padding: 1rem 0.5rem;
+}
+.account-usr-profile{
+  width: 6rem;
+  height: 6rem;
+}
+.account-usr-profile img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.account input{
+  width: 18rem;
+  border: 1px solid black;
+}
+/* Account CSS ends */
+
+/* CreateGroup CSS starts */
+.create-group{
+  width: 21rem;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+.create-group input{
+  width: 18rem;
+  border: 1px solid black;
+}
+.group-profile{
+  width: 6rem;
+  height: 6rem;
+}
+.group-profile img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* CreateGroup CSS ends */
+
+/* Notifications CSS starts */
+.notifications{
+  width: 28rem;
+  margin: auto;
+}
+.notification{
+  border: 1px solid black;
+  border-radius: 1rem;
+  margin: 0.8rem 0.8rem 1.5rem;
+  padding: 0.5rem;
+}
+.notification img{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.notification p{
+  margin-bottom: 0 !important;
+}
+/* Notifications CSS ends */
+
+/* Members CSS starts */
+.members{
+  width: 23rem;
+  margin: auto;
+}
+
+.members input {
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  right: 1.2em;
+}
+/* Members CSS ends */
+
+
+@media screen and (max-width: 992px) {
+
+  /* Navbar CSS starts */
+  .nav-right{
+    display: flex !important;
+  }
+  .offcanvas-right{
+    display: none !important;
+  }
+  .logout-btn > button{
+    display: inline !important;
+
+  }
+  /* Navbar CSS ends */
+
+  /* Search CSS starts */
+  .search-usr-div{
+    width: 22rem !important;
+  }
+  /* Search CSS ends */
+
+  /* FriendsList CSS starts */
+  .friends-list{
+    width: 100%;
+  } 
+  .user-details{
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  .user-details img {
+    margin-right: 0.5rem;
+  }
+  .users-list, .groups-list{
+    margin: auto;
+    width: 23rem;
+  }
+  /* FriendsList CSS ends */
+
+  /* Chat CSS starts */
+  .chat{
+    padding-bottom: 2rem;
+  }
+  .chat-messages{
+    margin-bottom: 2.5rem;
+  }
+  .chat-msg-form{
+    padding: 0.2rem 0rem !important;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .chat-msg-form textarea{
+    width: calc(100% - 5rem);
+    height: 3rem;
+    min-height: 3rem;
+    max-height: 130px;
+    border-radius: 1rem;
+  }
+  .chat-msg-form button{
+    border-radius: 50%;
+    transform: rotate(45deg);
+    width: 3rem;
+    height: 3rem;
+  }
+  /* Chat CSS ends */
+
+  /* Notifications CSS starts */
+  .notifications{
+    width: 23rem !important;
+  }
+  /* Notifications CSS ends */
+
+
+
+}
